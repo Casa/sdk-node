@@ -1,0 +1,48 @@
+{
+  "name": "@casainc/node",
+  "version": "0.1.0",
+  "author": "Casa",
+  "license": "MIT",
+  "scripts": {
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:fix": "yarn lint:eslint:fix && yarn lint:prettier:fix",
+    "lint:prettier": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
+    "lint:eslint": "esprint check",
+    "lint:eslint:fix": "esprint check --fix",
+    "build": "tsc --project tsconfig.json --noEmit false",
+    "build:check": "tsc --project tsconfig.json",
+    "start": "nodemon lib/index.ts"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "module": "dist/index.js",
+  "main": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=14.18.1",
+    "npm": "6.14.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+    "@tsconfig/node14": "^1.0.1",
+    "@types/jest": "^28.1.1",
+    "@types/node": "^17.0.40",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "esprint": "^3.6.0",
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.8.1",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.3"
+  }
+}

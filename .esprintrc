@@ -1,0 +1,4 @@
+{
+  "paths": ["lib/**/*.ts", "tests/**/*.ts"],
+  "ignored": ["**/node_modules/**/*"]
+}
