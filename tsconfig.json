@@ -8,7 +8,11 @@
       "lib/*": ["lib/*"],
       "tests/*": ["tests/*"]
     },
-    "typeRoots": ["./typed", "./node_modules/@types"],
+    "typeRoots": [
+      "./typed",
+      "./node_modules/@types",
+      "./node_modules/cross-fetch"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

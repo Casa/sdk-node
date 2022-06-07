@@ -37,12 +37,6 @@
     "no-new-object": ["error"],
     "no-param-reassign": ["warn"],
     "no-process-env": ["error"],
-    "no-restricted-imports": [
-      "error",
-      {
-        "patterns": [".*"]
-      }
-    ],
     "no-return-assign": ["error"],
     "no-self-compare": ["error"],
     "no-sequences": ["error"],

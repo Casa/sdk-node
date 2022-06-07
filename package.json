@@ -27,6 +27,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "cross-fetch": "^3.1.5"
+  },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
     "@tsconfig/node14": "^1.0.1",
