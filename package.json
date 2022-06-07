@@ -1,6 +1,6 @@
 {
   "name": "@casainc/node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Casa",
   "license": "MIT",
   "scripts": {
@@ -10,6 +10,7 @@
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint": "esprint check",
     "lint:eslint:fix": "esprint check --fix",
+    "prebuild": "rm -rf dist/",
     "build": "tsc --project tsconfig.json --noEmit false",
     "build:check": "tsc --project tsconfig.json",
     "start": "nodemon lib/index.ts"

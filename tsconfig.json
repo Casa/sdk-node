@@ -3,16 +3,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist",
     "rootDirs": ["./lib", "./tests"],
     "paths": {
       "lib/*": ["lib/*"],
       "tests/*": ["tests/*"]
     },
-    "typeRoots": [
-      "./typed",
-      "./node_modules/@types",
-      "./node_modules/cross-fetch"
-    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
