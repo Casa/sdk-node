@@ -5,11 +5,6 @@
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
-    "rootDirs": ["./lib", "./tests"],
-    "paths": {
-      "lib/*": ["lib/*"],
-      "tests/*": ["tests/*"]
-    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -24,6 +19,9 @@
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": true,
     "forceConsistentCasingInFileNames": true,
     "target": "es2019",
     "module": "commonjs",
@@ -32,6 +30,6 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": ["lib", "tests", "./*.ts"],
+  "include": ["lib", "tests", "./*.ts", "./*.json"],
   "exclude": ["./coverage", "./dist"]
 }

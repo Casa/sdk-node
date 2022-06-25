@@ -1,2 +1,2 @@
-export * from './scope'
+export * from './api'
 export * from './wallets'

@@ -1,4 +1,11 @@
 {
-  "paths": ["lib/**/*.ts", "tests/**/*.ts"],
-  "ignored": ["**/node_modules/**/*"]
+  "maxWarnings": 0,
+  "paths": [
+    "./**/*.json",
+    "./**/*.ts"
+  ],
+  "ignored": [
+    "./dist/**/*",
+    "./node_modules/**/*"
+  ]
 }

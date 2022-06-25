@@ -1,6 +1,6 @@
 {
   "name": "@casainc/node",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Casa",
   "license": "MIT",
   "scripts": {
@@ -13,14 +13,14 @@
     "prebuild": "rm -rf dist/",
     "build": "tsc --project tsconfig.json --noEmit false",
     "build:check": "tsc --project tsconfig.json",
-    "start": "nodemon lib/index.ts"
+    "start": "nodemon lib/index.ts",
+    "prepublish": "yarn lint && yarn build"
   },
   "files": [
     "dist/**"
   ],
-  "module": "dist/index.js",
-  "main": "dist/index.umd.js",
-  "types": "dist/index.d.ts",
+  "module": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "engines": {
     "node": ">=14.18.1",
     "npm": "6.14.7"

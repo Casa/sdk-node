@@ -1,9 +1,9 @@
 import fetch from 'cross-fetch'
 
-import { API_ORIGIN, ScopeOptions } from './scope'
+import { API_ORIGIN, ApiOptions } from './api'
 
 export interface Wallet {
-  // The ID of the respective WalletAccount that underpins the wallet
+  // The wallet's unique ID
   id: string
 
   // An arbitrary string to name the wallet
@@ -35,13 +35,10 @@ export async function getWallets({
   token,
   testnet = true,
   origin = API_ORIGIN,
-}: ScopeOptions) {
-  return await fetch(
-    `${origin}/api/walletAccounts?summarize=true&testnet=${String(testnet)}`,
-    {
-      headers: {
-        'X-Api-Key': token,
-      },
+}: ApiOptions) {
+  return await fetch(`${origin}/wallets?testnet=${String(testnet)}`, {
+    headers: {
+      'X-Api-Key': token,
     },
-  ).then(response => response.json() as Promise<Wallet[] | null>)
+  }).then(response => response.json() as Promise<Wallet[] | null>)
 }
