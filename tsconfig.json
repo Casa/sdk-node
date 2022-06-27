@@ -31,6 +31,6 @@
     "noEmit": true,
     "sourceMap": true
   },
-  "include": ["lib", "tests", "./*.json"],
+  "include": ["lib", "tests"],
   "exclude": ["./coverage", "./dist"]
 }

@@ -1,8 +1,8 @@
 {
   "maxWarnings": 0,
   "paths": [
-    "./**/*.json",
-    "./**/*.ts"
+    "./lib/**/*.json",
+    "./lib/**/*.ts"
   ],
   "ignored": [
     "./dist/**/*",
