@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch'
 
-import { API_ORIGIN, ApiOptions } from './api'
+import { API_ORIGIN, ApiOptions, ApiError } from './api'
 
 export interface Wallet {
   // The wallet's unique ID
@@ -13,7 +13,7 @@ export interface Wallet {
   coinType: 'BTC' | 'TBTC'
 
   // The type of keyset that secures the wallet
-  keysetType: 'single-key' | 'basic-multisig' | 'key-shield'
+  keysetType: 'phone' | 'basic-multisig' | 'key-shield'
 
   // The current deposit address of the wallet
   currentAddress: string
@@ -40,5 +40,13 @@ export async function getWallets({
     headers: {
       'X-Api-Key': token,
     },
-  }).then(response => response.json() as Promise<Wallet[] | null>)
+  }).then(async response => {
+    if (!response.ok) {
+      const error =
+        // eslint-disable-next-line no-magic-numbers
+        (await response.json()) as ConstructorParameters<typeof ApiError>[0]
+      throw new ApiError(error)
+    }
+    return response.json() as Promise<Wallet[] | null>
+  })
 }
