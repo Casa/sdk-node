@@ -33,7 +33,7 @@ interface CoinBalance {
 
 export async function getWallets({
   token,
-  testnet = true,
+  testnet = false,
   origin = API_ORIGIN,
 }: ApiOptions) {
   return await fetch(`${origin}/wallets?testnet=${String(testnet)}`, {
